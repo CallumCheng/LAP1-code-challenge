@@ -1,8 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #555;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+    height: 60px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+li {
+    text-align: center;
+    padding: 14px 12px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+.sign-in {
+    color: #fff;
+    border: 1px solid transparent;
+    padding: 9px 25px;
+    background-color: rgb(26, 115, 232);
+    border-radius: 5px;
+    border: 1px solid transparent;
+}
+
 body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .search-wrap {
@@ -24,7 +67,10 @@ form {
     font-size: 20px;
     border-radius: 45px;
     border: 1px solid #d3d3d3;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2)
+}
+
+.search-bar:hover {
+    box-shadow: 1px 1px 3px 1px rgba(201, 201, 201, 0.5);
 }
 
 .search-bar:focus {
@@ -34,15 +80,15 @@ form {
 .search {
     width: 15px;
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 18px;
+    left: 18px;
 }
 
 .mic {
     width: 15px;
     position: absolute;
     top: 12px;
-    left: 570px;
+    left: 520px;
 }
 
 .buttons {
@@ -54,17 +100,42 @@ form {
     gap: 15px;
 }
 
-button {
+.button {
     border: 1px solid transparent;
     padding: 8px 12px;
     background-color: #f8f9fa;
     border-radius: 5px;
 }
 
-button:hover {
+.button:hover {
     border: 1px solid #eee;
     box-shadow: 0 0 2px 1px rgba(189, 189, 189, 0.5);
     cursor: pointer;
 }
 
+.leaf {
+    width: 12px;
+}
 
+footer {
+    font-family: arial, sans-serif;
+    width: 100%;
+    background-color: #f2f2f2;
+}
+.panel1 {
+    border-bottom: 1px solid #ddd;
+    padding: 15px;    
+}
+
+/* .panel2 {
+    text-align: center;
+    padding: 15px
+} */
+
+.panel2 {
+    border-bottom: 1px solid #ddd;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px
+}
