@@ -15,6 +15,12 @@ app.get('/results', (req, res) => {
     })
 })
 
+app.get('/url', (req, res) => {
+    res.json({
+        results: results.map(r => r["url"])
+    })
+})
+ 
 app.get("/results/:id", (req, res) => {
     
     const id = req.params.id;
