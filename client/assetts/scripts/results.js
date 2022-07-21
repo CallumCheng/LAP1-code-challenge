@@ -1,37 +1,27 @@
-async function loadResults(){
-
-    const url = "http://localhost:3000/results";
-
-    try {
-        const res = await fetch(url);
-        const data = await res.json();
-
-        loadResults(data);
-
-    } catch (err) {
-        alert("There was a problem communicating with the server.")
-    }
-
-} 
-
 //trying to content of html file with js, struggling
-function loadResults(data){
-    const results = document.getElementById("results");
+const results = document.getElementById('results');
+const resultsContent = document.getElementById('results-content');
 
-    const result = document.createElement("h2");
-    result.textContent = "Results";
-
-    results.appendChild(result);
-
-    data["result"].forEach (s => {
-
-        const item = document.createElement("p");
-        item.textContent = s;
-        results.appendChild(item);
-
-    })
-
-
+function  displayResults(data) {
+    resultsContent.textContent = data["results"]
+    JSON.stringify(jsonobj,null,'\t')
 }
 
+
+function loadResults(){
+    
+    const url = 'http://localhost:3000/results'
+
+    fetch(url)
+        .then(res => res.json())
+        .then(data => displayResults(data))
+        .then(console.log)
+        .catch(err => {
+            console.log(err)
+        })
+    
+    }
+
 loadResults();
+
+console.log('Hello there')
