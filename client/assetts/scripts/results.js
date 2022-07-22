@@ -24,4 +24,3 @@ function loadResults(){
 
 loadResults();
 
-console.log('Hello there')

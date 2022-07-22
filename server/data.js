@@ -2,7 +2,7 @@ const results = [
     {
         id: 1,
         result:"what to watch",
-        url: src="https://www.google.com/search?q=what+to+watch&rlz=1C1ONGR_en-GBGB938GB938&oq=what+to+watch&aqs=chrome..69i57j46i433i512j0i433i512j0i512l2j0i433i512j69i60l2.7681j0j4&sourceid=chrome&ie=UTF-8#wxpd=:true"
+        url: "https://www.google.com/search?q=what+to+watch&rlz=1C1ONGR_en-GBGB938GB938&oq=what+to+watch&aqs=chrome..69i57j46i433i512j0i433i512j0i512l2j0i433i512j69i60l2.7681j0j4&sourceid=chrome&ie=UTF-8#wxpd=:true"
     }, 
     {
         id: 2,
