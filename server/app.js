@@ -15,10 +15,15 @@ app.get('/results', (req, res) => {
     })
 })
 
-app.get('/url', (req, res) => {
-    res.json({
-        results: results.map(r => r["url"])
-    })
+
+app.get('/randomUrl', (req, res) => {
+
+    function getRandomUrl () {
+        const ranUrl = results[Math.floor(Math.random() * results.length) + 1];
+        return ranUrl;
+    }
+
+    res.json(getRandomUrl());
 })
  
 app.get("/results/:id", (req, res) => {

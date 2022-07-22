@@ -1,17 +1,15 @@
-document.getElementById('lucky-button').addEventListener('click', goToRandomPage);
-
 function goToRandomPage () {
 
-const url = "http://localhost:3000/url";
-let data =
+const url = "http://localhost:3000/randomUrl";
+
     fetch(url)
         .then(res => res.json())
         .then(data => {
-            let randomSites = data[Math.floor(Math.random() * data.length)];
-            window.location.replace(randomSites);
+            window.open(data['url'], '_self');
         })
         .catch(err => {
             console.log(err)
         })
 }
 
+document.getElementById('lucky-button').addEventListener('click', goToRandomPage);
